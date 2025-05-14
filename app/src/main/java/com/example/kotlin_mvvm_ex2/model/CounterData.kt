@@ -1,5 +1,5 @@
 package com.example.kotlin_mvvm_ex2.model
 
-data class CounterModel(
+data class CounterData(
     var count: Int
 )
