@@ -23,10 +23,11 @@ View <-> ViewModel <-> Model
   - view 
     - HomePage (file)
   - viewmodel
-    - CounterViewModel (class)
+    - CounterViewModel (class): Extend ViewModel().
 - Define the data (CounterData).
 - Use repo (CounterRepository) to grep data.
-- Use `livedata` or `state` to store or update date in viewmodel (CounterViewModel).
+- Use `livedata` or `state` to store or update data in viewmodel (CounterViewModel).
+- Use `observeAsState` keep tracking the data in the view (HomePage).
 
 ## Resources
 

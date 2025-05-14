@@ -26,15 +26,14 @@ fun HomePage(modifier: Modifier = Modifier, viewModel: CounterViewModel) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Show "Count: 0" when app first create.
         counterData.value?.count?.let {
-            // 如果 it 不為 null，顯示它
             Text(
                 text = "Count: $it",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold
             )
         } ?: run {
-            // 如果 it 為 null，顯示 Count: 0
             Text(
                 text = "Count: 0",
                 fontSize = 24.sp,
