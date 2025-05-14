@@ -19,8 +19,10 @@ import com.example.kotlin_mvvm_ex2.viewmodel.CounterViewModel
 
 @Composable
 fun HomePage(modifier: Modifier = Modifier, viewModel: CounterViewModel) {
+    // UI state consumption
     val counterData = viewModel.counterData.observeAsState()
 
+    // Update ui elements
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

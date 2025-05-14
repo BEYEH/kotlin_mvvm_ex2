@@ -11,16 +11,18 @@ import kotlinx.coroutines.launch
 class CounterViewModel : ViewModel() {
     val counterRepo: CounterRepository = CounterRepository()
 
+    // UI state exposure
+    // Observables data holder: state flow, live data
     private val _counterData = MutableLiveData<CounterData>()
     val counterData: LiveData<CounterData> = _counterData
 
+    // UI state production
     fun increment() {
         viewModelScope.launch {
             val counterResult = counterRepo.updateCounter(1)
             _counterData.postValue(counterResult)
         }
     }
-
     fun decrement() {
         viewModelScope.launch {
             val counterResult = counterRepo.updateCounter(-1)
